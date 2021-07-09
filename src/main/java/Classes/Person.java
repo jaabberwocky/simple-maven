@@ -1,5 +1,7 @@
+package Classes;
+
 import com.arakelian.faker.service.RandomPerson;
-import com.sun.xml.internal.ws.util.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 public class Person {
 
@@ -9,6 +11,15 @@ public class Person {
     public Person(String fname, String lname) {
         this.fname = fname;
         this.lname = lname;
+    }
+
+    public Person(String fname) {
+        this(fname, "Default");
+    }
+
+    public Person() {
+        // default constructor
+        this("Default", "Default");
     }
 
     public void randomiseFname() {
